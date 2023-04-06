@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .boneco {
+        position: absolute;
+        left: 600px;
+        top: 500px;
+
+
+    }
+
+</style>
+</head>
+<body>
+    <map name="meu_mapa">
+
+        <area title="Visite o Rio Grande do Sul" shape="circle" coords="260,440,20"  href="https://www.estado.rs.gov.br/inicial">
+        <area title="Visite o Santa Catarina" shape="circle" coords="300,410,20"  href="https://www.sc.gov.br/">
+        <area title="Visite o Paraná" shape="circle" coords="280,374,20"  href="https://www.parana.pr.gov.br/">
+        <area title="Visite São Paulo" shape="circle" coords="312,347,20"  href="http://www.saopaulofc.net/">
+        <area title="Visite Rio De Janeiro" shape="circle" coords="383, 351,20"  href="https://prefeitura.rio/">
+        <area title="Espirito Santo" shape="circle" coords="400, 330,20"  href="https://www.es.gov.br/">
+        <area title="Minas Gerais" shape="circle" coords="360, 320,20"  href="https://www.mg.gov.br/">
+        <area title="Bahia" shape="circle" coords="400, 330,20"  href="https://www.esporteclubebahia.com.br/">
+        <area title="Sergipe" shape="circle" coords="450,210,10"  href="https://www.se.gov.br/">
+        <area title="Alagoas" shape="circle" coords="460,195,10"  href="https://alagoas.al.gov.br/">
+        <area title="Pernambuco" shape="circle" coords="450,180,10"  href="https://www.pe.gov.br/">
+        <area title="Paraiba" shape="circle" coords="475,165,10"  href="https://paraiba.pb.gov.br/">
+        <area title="Rio Grande Do Norte" shape="circle" coords="470,150,10"  href="http://www.rn.gov.br/">
+        <area title="Visite o Distrito Federal" shape="circle" coords="325,265,5"  href="https://pt.wikipedia.org/wiki/Distrito_Federal_(Brasil)">
+        <area title="Visite o Tocantins" shape="circle" coords="320,200,20"  href="https://pt.wikipedia.org/wiki/Tocantins">
+        <area title="Visite Roraima" shape="circle" coords="160,50,20"  href="https://pt.wikipedia.org/wiki/Roraima">
+        <area title="Visite o Acre" shape="circle" coords="50,200,20"  href="https://pt.wikipedia.org/wiki/Acre">
+        <area title="Visite o Amazonas" shape="circle" coords="120,120,20"  href="https://pt.wikipedia.org/wiki/Amazonas">
+        <area title="Visite o Rondônia" shape="circle" coords="150,215,20"  href="https://pt.wikipedia.org/wiki/Rondônia">
+        <area title="Visite o Mato Grosso do Sul" shape="circle" coords="240,320,20"  href="https://pt.wikipedia.org/wiki/Mato_Grosso_do_Sul">
+        <area title="Visite Goiás" shape="circle" coords="305,270,10"  href="https://pt.wikipedia.org/wiki/Goiás">
+        <area title="Visite o Mato Grosso" shape="circle" coords="230,230,20"  href="https://pt.wikipedia.org/wiki/Mato_Grosso">
+        <area title="Visite o Amapá" shape="circle" coords="280,50,20"  href="https://pt.wikipedia.org/wiki/Amapá">
+        <area title="Visite o Pará" shape="circle" coords="260,130,20"  href="https://pt.wikipedia.org/wiki/Pará">
+        <area title="Visite o Maranhão" shape="circle" coords="360,140,20"  href="https://pt.wikipedia.org/wiki/Maranhão">
+        <area title="Visite o Piauí" shape="circle" coords="390,170,20"  href="https://pt.wikipedia.org/wiki/Piauí">
+        <area title="Visite o Ceará" shape="circle" coords="430,140,20"  href="https://pt.wikipedia.org/wiki/Ceará">
+
+        
+
+
+    </map>
+    <img class="boneco" id="boneco" src="boneco.gif" width="80px">
+    <img onmousemove="MoveBoneco(event);" class="meu_mapa" src="mapa_brasil.jpg" usemap="#meu_mapa">
+</body>
+<script>
+    function MoveBoneco(event)
+    {
+        x = event.pageX;
+        y = event.pageY;
+        boneco.style.left = (x +5) + "px";
+        boneco.style.top = (y +5) + "px"; 
+    }
+</script>
+</html>
